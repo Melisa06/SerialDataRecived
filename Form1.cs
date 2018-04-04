@@ -34,12 +34,29 @@ namespace SerialReceive
         private TimeSpan aumentoTiempo = new TimeSpan(0, 1, 0);
         //Variable para abrir ventana de busqueda de archivos 
         FolderBrowserDialog fbd = new FolderBrowserDialog();
-       private string ruta; 
+       private string ruta;
+       //Inicio de la clase del diseño  
+       /// <summary>
+       /// Variables para que el usuario pueda administrar 
+       /// el tiempo de recepción y emisión de datos seriales 
+       /// </summary>
+       /// 
+       private TimeSpan time = new System.TimeSpan();
         //Inicio de la clase del diseño  
 
         public PROYECTO_SERIAL()
         {
             InitializeComponent();
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 0, 1));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 0, 5));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 0, 10));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 0, 20));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 0, 30));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 0, 40));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 0, 50));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 1, 0));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 5, 0));
+            cmbTiempo.Items.Add(time = new TimeSpan(0, 10, 0));
         }
 
 
